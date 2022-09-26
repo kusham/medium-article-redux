@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {useDispatch} from 'react-redux';
+import { addTodo } from "../actions/Todo";
 
 const AddTodo = () => {
   const [input, setInput] = useState("");
@@ -10,7 +11,7 @@ const dispatch = useDispatch();
     if (!input.trim()) {
       return;
     }
-    // dispatch(addTodo(input.value));
+    dispatch(addTodo(input));
     setInput("");
   };
   return (
