@@ -1,6 +1,5 @@
 import './App.css';
 import AddTodo from './components/AddTodo';
-import TodoActionButtons from './components/TodoActionButtons';
 import ViewTodo from './components/ViewTodo';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <AddTodo />
       <ViewTodo />
-      <TodoActionButtons />
     </div>
   );
 }
