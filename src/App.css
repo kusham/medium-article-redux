@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -57,4 +58,14 @@
   outline: none;
   border-radius: 30px;
   border: none;
+}
+
+.view ul {
+  background-color: rgba(187, 205, 241, 0.8);
+
+}
+
+.view li {
+  background-color: rgba(187, 205, 241, 0.8);
+  text-align: left;
 }

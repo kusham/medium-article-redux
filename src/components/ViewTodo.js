@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 const ViewTodo = () => {
   const todoList = useSelector((state) => state.todoReducer.todoData);
   return (
-    <div>
+    <div className="view">
       <ul>
         {todoList.map((todo) => (
           <li key={todo}>{todo}</li>
