@@ -1,6 +1,6 @@
 import { ADDING_START, ADD_TODO, ADD_TODO_FAIL } from "../constants/ActionType";
 
-export const addTodo = (input) => async (dispatch) => {
+export const addTodo = (input) => (dispatch) => {
     dispatch({ type: ADDING_START });
     try {
     //   here comes a API if you want this to save in database
