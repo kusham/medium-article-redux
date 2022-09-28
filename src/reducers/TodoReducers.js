@@ -1,4 +1,4 @@
-import { ADDING_START, ADD_TODO, ADD_TODO_FAIL } from "../constants/ActionType";
+import { ADDING_START, ADD_TODO, ADD_TODO_FAIL, COMPLETE_TODO } from "../constants/ActionType";
 
 const todoReducer = (
   state = { todoData: [], loading: false, error: false },

@@ -1,4 +1,4 @@
-import { ADDING_START, ADD_TODO, ADD_TODO_FAIL } from "../constants/ActionType";
+import { ADDING_START, ADD_TODO, ADD_TODO_FAIL, COMPLETE_TODO } from "../constants/ActionType";
 
 export const addTodo = (input) => (dispatch) => {
     dispatch({ type: ADDING_START });
@@ -8,5 +8,13 @@ export const addTodo = (input) => (dispatch) => {
     } catch (error) {
       console.log(error);
       dispatch({ type: ADD_TODO_FAIL });
+    }
+  };
+
+  export const markComplete = (id) => (dispatch) => {
+    try {
+        dispatch({ type: COMPLETE_TODO, data: id });
+    } catch (error) {
+      console.log(error);
     }
   };

@@ -7,7 +7,7 @@ const ViewTodo = () => {
     <div className="view">
       <ul>
         {todoList.map((todo) => (
-          <li key={todo}>{todo}</li>
+          <li key={todo.id}>{todo.task}</li>
         ))}
       </ul>
     </div>

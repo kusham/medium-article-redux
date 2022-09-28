@@ -69,3 +69,22 @@
   background-color: rgba(187, 205, 241, 0.8);
   text-align: left;
 }
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.buttonRow button {
+  background-color: rgba(33, 105, 4, 0.8);
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.buttonRow button:hover {
+  background-color: rgba(165, 9, 9, 0.8);
+}

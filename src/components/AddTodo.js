@@ -4,11 +4,15 @@ import { addTodo } from "../actions/Todo";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState({
+    id: Math.random() * 1000,
+    task: "",
+    completed: false,
+  });
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    if (!input.trim()) {
+    if (!input) {
       return;
     }
     dispatch(addTodo(input));
@@ -18,9 +22,9 @@ const AddTodo = () => {
     <div className="form">
       <form onSubmit={handleOnSubmit}>
         <input
-        value={input}
+          value={input.task}
           placeholder="Type here"
-          onChange={(event) => setInput(event.target.value)}
+          onChange={(event) => setInput({ ...input, task: event.target.value })}
         />
         <button type="submit">Add Todo</button>
       </form>
